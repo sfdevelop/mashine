@@ -40,3 +40,5 @@ $(document).ready(function(){
         return false;
     });
 });
+
+$().alert('close')

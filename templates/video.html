@@ -1,6 +1,6 @@
 <div class="video " id="video-bg">
     <video autoplay muted loop id="myVideo">
-        <source src="../video/file.mp4" type="video/mp4">
+        <source src="video/file.mp4" type="video/mp4">
     </video>
     <div class="container py-5 ">
         <div class="row py-5">
@@ -17,27 +17,26 @@
             </div>
             <div class="col-lg-6 white relative mt-5 mt-lg-0">
                 <div class="frame_white animated fadeInLeft  delay-1s wow" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset = "200"></div>
-                <form action="">
+                <form action="" method="post">
                     <div class="box__header p-3 p-sm-5">
                         <h2>ВАС ЖДЕТ ПОТОК <br> НОВЫХ КЛИЕНТОВ</h2>
                         <p>Просто оставьте заявку и мы все сделаем за Вас!</p>
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="p-2 w-100" placeholder="Имя" required>
+                                <input type="text" name="name" class="p-2 w-100" placeholder="Имя" required>
                             </div>
                             <div class="col-6">
-                                <input type="text" class="p-2 w-100" placeholder="Телефон" required>
+                                <input type="text" class="p-2 w-100" placeholder="Телефон" name="subject" required>
                             </div>
                             <div class="col-6 mt-4">
                                 <p class="text-center p-big">В какое время Вам перезвонить?</p>
                             </div>
                             <div class="col-6 mt-4">
-                                <input type="time" class="p-2 w-100" id="appt" name="appt" min="09:00" max="18:00">
+                                <input type="time" class="p-2 w-100" id="appt"  min="09:00" max="18:00" name="email">
                             </div>
                         </div>
-                        <button class="btn mt-4 w-100">Отправить</button>
+                        <button name="lid" type="submit" class="btn mt-4 w-100">Отправить</button>
                     </div>
-
                 </form>
             </div>
         </div>

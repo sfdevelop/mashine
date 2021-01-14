@@ -220,6 +220,9 @@ h5 {
 #scroller:hover{
     cursor: pointer;
 }
+.alert{
+    margin-bottom: 0;
+}
 
 
 

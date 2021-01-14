@@ -1,3 +1,27 @@
+<?php
+    if(isset($_POST['lid'])){
+                    
+        //мейл куда приходят письма
+        $mail_to='bu77etproof@gmail.com';
+        $mail_of="bu77etproof@gmail.com";
+
+                    $email = $mail_to;         
+                    $to = $email;
+
+                    $subject = "Новый лид";
+
+                    $message = "\nИмя  : ".$_POST['name']."\nТелефон: ".$_POST['subject']."\nПерезвонить в : : ".$_POST['email'];
+
+                    $headers = "Content-type:text/plain; Charset=utf-8\r\n";
+                    $headers .= "From:".$mail_of;
+
+                    mail($to, $subject, $message, $headers);
+                
+                $post= 'Ваше письмо отправлено! Менеджер свяжется с Вами в ближайшее время';
+                
+    }   
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,9 +36,22 @@
     <link rel="stylesheet" href="css/style.css">    
     <link rel="stylesheet" href="css/animate.min.css">    
 
-    <title>Document</title>
+    <title>Главная</title>
 </head>
 <body>
+
+    <?php
+        if($post){
+    ?>
+        <div class="alert alert-success"><?php echo $post ?>
+            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button> -->
+        </div>
+    <?php     
+        }
+    ?>
+
     <?php
         include 'templates/head.html';
         include 'templates/work.html';
